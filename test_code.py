@@ -56,15 +56,15 @@ def add_numbers(a, b):
     return result
 
 def recursive(depth=0):
-    if depth > 10:
+    if depth > 5:
         return "Done"
     return recursive(depth + 1)
 
 def unsafe_exception():
     try:
         x = 1 / 0
-    except ZeroDivisionError as e:
-        print(f"Error: {e}")
+    except ZeroDivisionError:
+        pass
 
 def debug_mode():
     pass
@@ -90,6 +90,7 @@ def huge_function():
         print(f"line{i}")
 
 def test_return():
+print("Never execute")
     return True
 
 def check_none(value):
